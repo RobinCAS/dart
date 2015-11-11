@@ -1,0 +1,48 @@
+<h3>Users</h3>
+
+<p>
+  <a style="width: 150px;" class="btn btn-info" ui-sref="new_user">New User</a>
+</p>
+
+<nav>
+  <ul class="pagination">
+    <li>
+      <a aria-label="Previous" ng-click="prev()">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a>{{current}}</a></li>
+    <li>
+      <a aria-label="Next" ng-click="next()">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Delete</th>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Created</th>
+      <th>Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="u in users">
+      <td><button class="btn btn-danger" ng-click="delete(u.id)">X</button></td>
+      <td><a class="btn btn-warning btn-xs" ui-sref="user_detail({user_id: u.id})">{{u.id}}</a></td>
+      <td>{{u.title}}</td>
+      <td>{{u.name}}</td>
+      <td>{{u.age}}</td>
+      <td>{{u.gender}}</td>
+      <td>{{u.createdAt | date}}</td>
+      <td>{{u.updatedAt | date}}</td>
+    </tr>
+  </tbody>
+</table>

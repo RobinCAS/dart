@@ -1,0 +1,38 @@
+{
+  "name": "ge-sales",
+  "version": "1.0.0",
+  "description": "Sample GE App to track sales",
+  "scripts": {
+    "watch" : "webpack --progress --colors --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GE-Class/ge-sales.git"
+  },
+  "author": "Chyld Medford <chyld.medford@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GE-Class/ge-sales/issues"
+  },
+  "homepage": "https://github.com/GE-Class/ge-sales#readme",
+  "dependencies": {
+    "angular": "^1.4.7",
+    "angular-ui-router": "^0.2.15",
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "morgan": "^1.6.1",
+    "pg": "^4.4.3",
+    "pg-hstore": "^2.3.2",
+    "request": "^2.65.0",
+    "sequelize": "^3.12.2"
+  },
+  "devDependencies": {
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-copy": "0.0.2",
+    "gulp-watch": "^4.3.5",
+    "webpack": "^1.12.2"
+  }
+}
