@@ -1,59 +1,229 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="geSales">
-  <head>
+<html lang="en">
+
+<head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GE Sales</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <style>
-      a[ng-click]{
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">GE Sales</a>
-        </div>
+    <title>#cascade - data. applications. knowledge.</title>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/#/">Home</a></li>
-            <li><a href="/#/about">About</a></li>
-            <li><a href="/#/contact">Contact</a></li>
-            <li><a href="/#/users">Users</a></li>
-            <li><a href="/#/products">Products</a></li>
-            <li><a href="/#/sales">Sales</a></li>
-          </ul>
+    <!-- Bootstrap Core CSS -->
+    <link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/splash.css" rel="stylesheet">
+    <link href="assets/css/sb.css" rel="stylesheet">
+
+
+
+    <!-- Custom Fonts -->
+    <link href="libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="js/dart_create.js"></script>
+    <script type="text/javascript" src="js/sb.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-app="DartApp" onload="dart_setup_catalog()">
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" id="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <img class="splash_nav_ge_logo" src="images/ge_monogram_primary_white_RGB.png">
+                    #<span style="color:#00b050">cas</span>cade
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#splash_about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="cascade.html#/catalog">Catalog</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#splash_start">Start</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#splash_who">Who</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+            <!-- Searchbar -->
+            <div class="navbar-form navbar-right">
+              <div class="input-group" id="smart_search_div">
+                <!--
+                <span class="input-group-addon" id="sizing-addon2">
+                  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </span>
+                <input type="text" class="form-control" placeholder="Applications">
+                -->
+              </div>
+            </div>
         </div>
-      </div>
+        <!-- /.container -->
     </nav>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <section ui-view></section>
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading" style="margin-left:-40px;"><span style="color:#00b050">#cas</span>cade</h1>
+                        <p class="intro-text">Open source apps for self-service analytics</p>
+                        <a href="#splash_about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="splash_about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>about</h2>
+                <p><span style="color:#00b050">#CAScade</span> is an open source app portal for developing, sharing and using self-service analytics across GE. Developed by Audit Staff, its mission is to provide world class analytics for all functions to drive sustainable outcomes across GE. </p>
+                <p>responsive. scalable. ready to grow.</p>
+                <p><span style="color:#00b050">built on Predix.</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+
+    <section  id="splash_catalog" class="container content-section text-center"  ng-controller="CarouselCtrl" style="padding-bottom:200px">
+      <div class="row" >
+        <h2>Open 'plug & play' app catalog</h2>
+        <div class="col-lg-8" >
+          <img src="images/splash/feature_web_top.png" class="img-responsive">
         </div>
       </div>
-    </div>
+        <div class="row">
+          <div class="col-lg-12" style="padding-top:10px;"  >
+            <a href="http://web-crawler.grc-apps.svc.ice.ge.com/" target="_blank">
+              <img src="images/splash/feature_web_mid.png"  class="img-responsive">
+            </a>
+          </div>
+        </div>
+        <!-- BEGIN : top apps -->
+        <div class="col-lg-12">
+          <div class="cat_title" style="padding-top:50px;">
+            <h2>Top self-service analytics apps:<span class="span_green">Explore. Discover. Apply.</span></h2>
+          </div>
+        </div>
+        <div class="row" style="text-align:center">
+          <div class="col-lg-4">
+            <a href="http://dart.grc-apps.svc.ice.ge.com/cascade.html#/app/25022" target="_blank">
+              <img src="images/splash/Picture1.png"  class="img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4">
+            <a href="http://dart.grc-apps.svc.ice.ge.com/cascade.html#/app/25017" target="_blank">
+              <img src="images/splash/Picture2.png"  class="img-responsive">
+            </a>
+          </div>
+          <div class="col-lg-4">
+            <a href="http://dart.grc-apps.svc.ice.ge.com/cascade.html#/app/25019" target="_blank">
+              <img src="images/splash/Picture4.png"  class="img-responsive">
+            </a>
+          </div>
+        </div>
+          <!-- END : top apps -->
+        <div class="row">
+          <div class="col-lg-12"><a  href="cascade.html#/catalog"> <button type="button" class="btn btn-primary">view entire catalog</button></a></div>
+        </div>
+    </section>
 
-<!--
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.12/angular.min.js"></script>
--->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="http://code.highcharts.com/highcharts.js"></script>
-    <script src="/app.js"></script>
+    <!-- Start Section -->
+    <div  id="splash_start"> </div><br><br><br><br><br><br><br>
+    <section  class="start-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2 >get started</h2>
+                    <p>download. read. build.</p>
+                    <a type="button" href="cascade.html#/documentation" class="btn btn-primary">documentation</a>
+                    <a type="button" href="cascade.html#/tools" class="btn btn-primary">tools</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </body>
+    <!-- Who Section -->
+  <br><br><br><br><br><br><br>
+    <section  class="splash_who" class="container content-section text-center" ng-controller="TeamCtrl">
+<div id="splash_who"></div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2><span style="color:#00b050">#cas</span>cade Full stack Team</h2>
+                <div class="container">
+                <ul class="row">
+                  <!-- teammate bio -->
+                  <li class="col-lg-4" ng-repeat="people in team">
+                      <img ng-src="images/team/{{people.image}}" class="img-circle" height="200" width="200"/>
+                      <h4 style="padding-top:10px">{{people.name}}</h4>
+                      <!--<p>{{people.bio}}</p>-->
+                  </li>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-4 text-left">
+              <img class="splash_nav_ge_logo" src="images/ge_monogram_primary_white_RGB.png">
+              GE Corporate Audit Staff</div><div class="col-lg-8 text-right">Privacy | Terms of Use | Contact Us | Copyright © 2015 General Electric Company. All rights reserved.</div>
+          </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="libs/jquery-ui-1.11.4/jquery-ui.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <!-- <script src="libs/bootstrap-3.3.5/bootstrap.min.js"></script> -->
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/ui-bootstrap-tpls-0.14.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
+
+
+    <!-- Plugin JavaScript -->
+    <!-- <script src="js/jquery.easing.min.js"></script> -->
+
+    <!-- JavaScript custom -->
+    <script type="text/javascript" src="js/splash.js"></script>
+
+</body>
+
 </html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>#cascade - data. applications. knowledge.</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="libs/bootstrap-3.3.5/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+
+    <link href="css/sb.css" rel="stylesheet">
+    <link rel="stylesheet" src="libs/raty-2.7.0/lib/jquery.raty.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/cat_icon.css" rel="stylesheet">
+    <link href="libs/qtip2/qtip2.css" rel="stylesheet">
+
+
+    <!-- Custom JS -->
+    <script type="text/javascript" src="js/dart_create.js"></script>
+    <script type="text/javascript" src="js/sb.js"></script>
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-app="DartApp" onload="dart_setup_catalog()" ng-controller="AppCtrl">
+  <div class="wrapper">
+    <div class="box">
+      <div class="row row-offcanvas row-offcanvas-left">
+        <!-- sidebar -->
+        <div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
+          <!-- BEGIN : CASCADE -->
+          <div class="nav hidden-xs lg-menu sb-brand">
+            <a class="navbar-text" href="http://dart.grc-apps.svc.ice.ge.com/cascade.html#/catalog">
+              <img class="sb_splash_nav_ge_logo" src="images/ge_monogram_primary_white_RGB.png">
+              #<span style="color:#00b050">cas</span>cade
+            </a>
+          </div>
+          <div class="nav visible-xs xs-menu sb-brand">
+            <a class="navbar-text text-center" href="http://dart.grc-apps.svc.ice.ge.com/cascade.html#/catalog">
+              <img class="sb_splash_nav_ge_logo img-responsive" src="images/site/CAS_logo_fnl_g.png">
+            </a>
+          </div>
+          <!-- END : CASCADE -->
+
+          <!--
+        	<ul class="nav">
+      			<li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+        	</ul>
+        -->
+
+          <!-- full  sidebar nav-->
+          <ul class="nav hidden-xs" class="lg-menu">
+              <li><a ui-sref="documentation"><i class="fa fa-book"></i> Documentation</a></li>
+              <li><a ui-sref="tools"><i class="fa fa-wrench"></i> Tools</a></li>
+          </ul>
+        	<!-- tiny sidebar nav-->
+          <ul class="nav visible-xs" class="xs-menu">
+            	<li><a ui-sref="documentation" class="text-center"><i class="fa fa-book"></i></a></li>
+              <li><a ui-sref="tools" class="text-center"><i class="fa fa-wrench"></i></a></li>
+          </ul>
+
+          <div ui-view="sidebar_dynamic"></div>
+          <ul class="list-unstyled hidden-xs" id="sidebar-footer">
+              <li style="font-size:10px;">
+                GE Corporate Audit Staff Privacy | Terms of Use | Contact Us | Copyright © 2015 General Electric Company. All rights reserved.
+              </li>
+          </ul>
+
+      </div>
+      <!-- /sidebar -->
+
+      <!-- main right col -->
+      <div class="column col-sm-10 col-xs-11" id="main">
+
+        <!-- top nav -->
+      	<div class="navbar navbar-cascade navbar-static-top" role="navigation" id="navbar">
+          <div class="container-fluid">
+
+            <div class="navbar-header">
+
+              <button type="button" class="navbar-toggle btn btn-default btn-cascade" style="background:#00b050" data-toggle="collapse" data-target=".navbar-collapse">
+               <span class="glyphicon glyphicon-menu-hamburger"></span>
+             </button>
+             <!--
+              <a class="navbar-brand" href="http://dart.grc-apps.svc.ice.ge.com/cascade.html#/catalog">
+                <img class="splash_nav_ge_logo" src="images/ge_monogram_primary_white_RGB.png">
+                #<span style="color:#46ad00">cas</span>cade
+              </a>
+                -->
+            </div>
+
+
+            <div class="navbar-collapse collapse" id="searchbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a ui-sref="catalog">Catalog</a>
+                </li>
+                <li>
+                  <a ui-sref="tools">Tools</a>
+                </li>
+                <li>
+                  <a ui-sref="documentation">Documentation</a>
+                </li>
+              </ul>
+              <form class="navbar-form">
+                <div class="form-group" style="display:block;" id="div_smart_search">
+                  <div style="display:table;" class="input-group">
+                    <span style="width: 1%;" class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                    <input id="input_smart_search" type="text" autofocus="autofocus" autocomplete="off" placeholder="Search Here" name="search" style="" class="form-control">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- END : collapse -->
+          </div>
+        </div> <!--END : navbar -->
+        <div ui-view style="margin-top:50px;"></div>
+      </div>  <!-- main right col -->
+    </div>
+  </div>
+</div>
+
+  <!-- JavaScript libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="libs/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+  <script src="libs/angular.min.js"></script>
+  <script src="libs/angular-ui-router.js"></script>
+  <script src="libs/ui-bootstrap-tpls-0.14.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="libs/raty-2.7.0/lib/jquery.raty.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.7/angular-filter.min.js"></script>
+<script type="text/javascript" src="libs/qtip2/qtip2.js"></script>
+
+  <!-- JavaScript custom -->
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/cascade.js"></script>
+
+<script type="text/javascript" src="js/scripts.js"></script>
+
+  <script type="text/javascript">
+  
+
+  $('.starRating').raty();
+  </script>
+</body>

@@ -1,20 +1,20 @@
 {
-  "name": "ge-sales",
+  "name": "cascade",
   "version": "1.0.0",
-  "description": "Sample GE App to track sales",
+  "description": "CAScade house",
   "scripts": {
     "watch" : "webpack --progress --colors --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GE-Class/ge-sales.git"
+    "url": "git+https://github.build.ge.com/212405588/dart11.git"
   },
-  "author": "Chyld Medford <chyld.medford@gmail.com>",
-  "license": "MIT",
+  "author": "Seth DeSantis <seth@ge.com.com>",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/GE-Class/ge-sales/issues"
+    "url": "https://github.build.ge.com/212405588/dart11"
   },
-  "homepage": "https://github.com/GE-Class/ge-sales#readme",
+  "homepage": "https://github.build.ge.com/212405588/dart11#readme",
   "dependencies": {
     "angular": "^1.4.7",
     "angular-ui-router": "^0.2.15",

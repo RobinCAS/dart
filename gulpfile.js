@@ -4,7 +4,7 @@ var watch = require('gulp-watch');
 var del = require('del');
 
 var paths = {
-  htmlsrc: ['./client/**/*.html', './client/views/**/*'],
+  htmlsrc: ['./client/**/*.html', './client/views/**/*','./client/assets/**/*'],
   destination: './public'
 };
 
@@ -22,5 +22,5 @@ gulp.task('watch', function(){
 });
 
 gulp.task('clean', function(){
-  return del(['./public/**/*', '!./public/app.js','!./public/views/**/*']);
+  return del(['./public/**/*', '!./public/app.js','./public/views/**/*', './client/assets/**/*']);
 });
