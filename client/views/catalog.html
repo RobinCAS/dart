@@ -1,0 +1,39 @@
+
+<!-- BEGIN : top apps -->
+<div class="row">
+    <div class="col-lg-12">
+      <div class="cat_title" style="padding-top:20px;">
+        <p>Top self-service analytics apps:<span class="span_green">Explore. Discover. Apply.</span></p>
+      </div>
+
+      <div ng-repeat="app in apps |  catalogfilter_owner:af_owner | catalogfilter_category:af_category" repeat-done>
+        <div class="icon_main_div" ui-sref="app({appid:app.appid})"  qtd="{{app.description}}">
+          <div class="icon_image_div">
+            <img ng-src="assets/images/app_imgs/{{app.image_thumb}}" alt="{{app.title}}" class="img-responsive">
+          </div>
+          <div class="icon_title_div">
+            {{app.title}}
+          </div>
+          <div class="icon_bot_div">view</div>
+        </div>
+      </div>
+      <!-- END : top apps -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="thumbnail thumb_green">
+        <div class="caption">
+          <h3>Add a new application</h3>
+          <p>Register your application to have it added into the catalog</p>
+          <p>
+            <a href="#/add_app_form" class="btn btn-primary" role="button">register</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+</script>

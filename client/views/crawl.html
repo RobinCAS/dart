@@ -1,0 +1,12 @@
+<div ng-controller="CrawlCtrl">
+  <div ng-repeat="hit in hits | filter:{pdf:''}" >
+    <ul>
+      <h4>{{hit.url}}</h4>
+      <li ng-repeat="i in hit.pdf track by $index">
+        <a href="{{hit.pdf[$index]}}" target="_blank">{{hit.link_title[0]}} - PDF {{$index}}</a>
+      </li>
+    </ul>
+
+  </div>
+
+</div>

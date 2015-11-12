@@ -3,23 +3,26 @@
   "version": "1.0.0",
   "description": "CAScade house",
   "scripts": {
-    "watch" : "webpack --progress --colors --watch"
+    "watch": "webpack --progress --colors --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.build.ge.com/212405588/dart11.git"
+    "url": "git+https://github.build.ge.com/CAS3T15DARC/dart11.git"
   },
   "author": "Seth DeSantis <seth@ge.com.com>",
   "license": "",
   "bugs": {
-    "url": "https://github.build.ge.com/212405588/dart11"
+    "url": "https://github.build.ge.com/CAS3T15DARC/dart11"
   },
-  "homepage": "https://github.build.ge.com/212405588/dart11#readme",
+  "homepage": "https://github.build.ge.com/CAS3T15DARC/dart11#readme",
   "dependencies": {
     "angular": "^1.4.7",
     "angular-ui-router": "^0.2.15",
     "body-parser": "^1.14.1",
+    "bootstrap": "^3.3.5",
     "express": "^4.13.3",
+    "jquery": "^2.1.4",
+    "jquery-ui": "^1.10.5",
     "morgan": "^1.6.1",
     "pg": "^4.4.3",
     "pg-hstore": "^2.3.2",

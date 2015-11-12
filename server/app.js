@@ -4,20 +4,14 @@ var request = require('request');
 var morgan = require('morgan');
 
 var app = express();
-app.use(express.static(__dirname + '/../public'));
+app.use(express.static(__dirname + '/../client'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
-// var models = require('./models');
-// app.listen(3000, function() {
-//   console.log('***********************************');
-//   console.log('listening:', 3000);
-//   console.log('***********************************');
-// });
 var models = require('./models');
 models.sequelize.sync().then(function(){
-  app.listen(3000, function() {
+  app.listen(3001, function() {
     console.log('***********************************');
     console.log('listening:', 3000);
     console.log('***********************************');

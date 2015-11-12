@@ -1,0 +1,31 @@
+<div ng-controller="AppCtrl" class="container-fluid app_about_container">
+    <div class="row" ng-repeat="app in apps | filter:id_in"> <!-- BEGIN : row-->
+    <div class="col-md-6 col-md-offset-2">
+      <h2>{{app.title}}</h2>
+    </div>
+    <div class="col-md-8">  <!-- BEGIN : col-md-8 -->
+      <img ng-if="!app.image_big" src="assets/images/catalog/coming_soon.png" class="img-responsive" width="650"/>
+      <img ng-if="app.image_big" ng-src="assets/images/catalog/{{app.image_big}}" class="img-responsive" width="650"/>
+    </div>  <!-- END : col-md-8 -->
+    <div class="col-md-4">  <!-- BEGIN : col-md-4 -->
+      <p><b>Description:  </b>{{app.description}}</p>
+      <p><b>Category:  </b>{{app.category}}</p>
+      <p><b>Owner:  </b>{{app.owner}}</p>
+      <a ng-if="app.link1_url" href="{{app.link1_url}}" class="btn btn-primary"  role="button">
+        <span ng-if="!app.link1_text">Application</span>
+        <span ng-if="app.link1_text">{{app.link1_text}}</span>
+      </a>
+      <a ng-if="app.link2_url" href="{{app.link2_url}}" class="btn btn-primary"  role="button">
+        <span ng-if="!app.link2_text">Application</span>
+        <span ng-if="app.link2_text">{{app.link2_text}}</span>
+      </a>
+      <div class="ratings" style="margin-top:20px">
+        <div ng-repeat="n in [1]">
+          <uib-rating ng-model="rate" max="5" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
+          <div class="starRating"></div>
+        </div>
+      </div>
+
+    </div>  <!-- END : col-md-4 -->
+  </div>  <!-- END : row-->
+</div>

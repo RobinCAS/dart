@@ -12,22 +12,25 @@
     <title>#cascade - data. applications. knowledge.</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="assets/css/splash.css" rel="stylesheet">
+    <!--
     <link href="assets/css/sb.css" rel="stylesheet">
-
+-->
 
 
     <!-- Custom Fonts -->
-    <link href="libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-    <script type="text/javascript" src="js/dart_create.js"></script>
-    <script type="text/javascript" src="js/sb.js"></script>
 
+<!--
+<script type="text/javascript" src="assets/js/dart_create.js"></script>
+    <script type="text/javascript" src="assets/js/sb.js"></script>
+-->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -37,7 +40,8 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-app="DartApp" onload="dart_setup_catalog()">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-app="DartApp" onload="">
+  <div class="container-fluid">
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" id="navbar">
         <div class="container-fluid">
@@ -46,7 +50,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <img class="splash_nav_ge_logo" src="images/ge_monogram_primary_white_RGB.png">
+                    <img class="splash_nav_ge_logo" src="assets/images/ge_monogram_primary_white_RGB.png">
                     #<span style="color:#00b050">cas</span>cade
                 </a>
             </div>
@@ -122,13 +126,13 @@
       <div class="row" >
         <h2>Open 'plug & play' app catalog</h2>
         <div class="col-lg-8" >
-          <img src="images/splash/feature_web_top.png" class="img-responsive">
+          <img src="assets/images/splash/feature_web_top.png" class="img-responsive">
         </div>
       </div>
         <div class="row">
           <div class="col-lg-12" style="padding-top:10px;"  >
             <a href="http://web-crawler.grc-apps.svc.ice.ge.com/" target="_blank">
-              <img src="images/splash/feature_web_mid.png"  class="img-responsive">
+              <img src="assets/images/splash/feature_web_mid.png"  class="img-responsive">
             </a>
           </div>
         </div>
@@ -141,17 +145,17 @@
         <div class="row" style="text-align:center">
           <div class="col-lg-4">
             <a href="http://dart.grc-apps.svc.ice.ge.com/cascade.html#/app/25022" target="_blank">
-              <img src="images/splash/Picture1.png"  class="img-responsive">
+              <img src="assets/images/splash/Picture1.png"  class="img-responsive">
             </a>
           </div>
           <div class="col-lg-4">
             <a href="http://dart.grc-apps.svc.ice.ge.com/cascade.html#/app/25017" target="_blank">
-              <img src="images/splash/Picture2.png"  class="img-responsive">
+              <img src="assets/images/splash/Picture2.png"  class="img-responsive">
             </a>
           </div>
           <div class="col-lg-4">
             <a href="http://dart.grc-apps.svc.ice.ge.com/cascade.html#/app/25019" target="_blank">
-              <img src="images/splash/Picture4.png"  class="img-responsive">
+              <img src="assets/images/splash/Picture4.png"  class="img-responsive">
             </a>
           </div>
         </div>
@@ -187,7 +191,7 @@
                 <ul class="row">
                   <!-- teammate bio -->
                   <li class="col-lg-4" ng-repeat="people in team">
-                      <img ng-src="images/team/{{people.image}}" class="img-circle" height="200" width="200"/>
+                      <img ng-src="assets/images/team/{{people.image}}" class="img-circle" height="200" width="200"/>
                       <h4 style="padding-top:10px">{{people.name}}</h4>
                       <!--<p>{{people.bio}}</p>-->
                   </li>
@@ -201,20 +205,20 @@
         <div class="container text-center">
           <div class="row">
             <div class="col-lg-4 text-left">
-              <img class="splash_nav_ge_logo" src="images/ge_monogram_primary_white_RGB.png">
+              <img class="splash_nav_ge_logo" src="assets/images/ge_monogram_primary_white_RGB.png">
               GE Corporate Audit Staff</div><div class="col-lg-8 text-right">Privacy | Terms of Use | Contact Us | Copyright © 2015 General Electric Company. All rights reserved.</div>
           </div>
         </div>
     </footer>
 
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="libs/jquery-ui-1.11.4/jquery-ui.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <!-- <script src="libs/bootstrap-3.3.5/bootstrap.min.js"></script> -->
-    <script src="libs/angular.min.js"></script>
-    <script src="libs/ui-bootstrap-tpls-0.14.1.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="assets/libs/jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script src="assets/libs/angular.min.js"></script>
+    <script src="assets/libs/ui-bootstrap-tpls-0.14.1.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
 
 
@@ -222,8 +226,9 @@
     <!-- <script src="js/jquery.easing.min.js"></script> -->
 
     <!-- JavaScript custom -->
-    <script type="text/javascript" src="js/splash.js"></script>
+    <script type="text/javascript" src="assets/js/splash.js"></script>
 
+</div>
 </body>
 
 </html>

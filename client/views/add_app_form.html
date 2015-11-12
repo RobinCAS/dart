@@ -1,0 +1,58 @@
+<div class="jumbotron" ng-controller="FormAddAppCtrl">
+  <h2>Submit a new application  </h2>
+  <div id="messages" ng-show="message">{{ message }}</div>
+  <form ng-submit="processForm()">
+    <!-- Application Name -->
+    <div class="form-group">
+      <label>App Name</label>
+      <input type="text" class="form-control" ng-model="app.title" placeholder="Application Name" name="app name"/>
+    </div>
+    <!-- Application Description -->
+    <div class="form-group">
+      <label>Description</label>
+      <textarea class="form-control" ng-model="app.description" placeholder="Description" name="app description"/>
+    </div>
+    <!-- Application Category -->
+    <div class="form-group" ng-controller="CatCtrl">
+      <label>Category</label>
+      <select name="app category" ng-model="app.category">
+        <option ng-repeat="cat in categories" value="{{cat.title}}">{{cat.title}}</option>
+      </select>
+    </div>
+    <!-- Application Impact -->
+    <div class="form-group">
+      <label>Impact</label>
+      <div class="spacer"></div>
+      <div class="btn-group">
+        <label class="btn btn-primary" ng-model="app.impact" uib-btn-radio="'low'">Low</label>
+        <label class="btn btn-primary" ng-model="app.impact" uib-btn-radio="'med'">Medium</label>
+        <label class="btn btn-primary" ng-model="app.impact" uib-btn-radio="'high'">Height</label>
+      </div>
+    </div>
+    <div class="spacer" style="padding-bottom:10px"></div>
+    <!-- Application Classification -->
+    <div class="form-group">
+      <label>Classification</label>
+      <div class="spacer"></div>
+      <div class="btn-group">
+        <label class="btn btn-primary" ng-model="app.dataClassification" uib-btn-radio="'int'">Internal</label>
+        <label class="btn btn-primary" ng-model="app.dataClassification" uib-btn-radio="'ext'">External</label>
+      </div>
+    </div>
+    <div class="spacer" style="padding-bottom:10px"></div>
+    <!-- Application Owner -->
+    <div class="form-group">
+      <label>Owner</label>
+      <input type="text" class="form-control" ng-model="app.owner" placeholder="Application Owner" name="app owner">
+    </div>
+    <!-- Link -->
+    <div class="form-group">
+      <label>Link</label>
+      <input type="text" class="form-control" ng-model="app.link" placeholder="Application Link" name="app link">
+    </div>
+    <!-- submit button -->
+    <button type="submit" class="btn btn-success btn-lg btn-block">
+      Submit
+    </button>
+  </form>
+</div>

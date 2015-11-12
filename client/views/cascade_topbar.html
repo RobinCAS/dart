@@ -1,0 +1,39 @@
+<div class="container-fluid">
+
+  <div class="navbar-header">
+
+    <button type="button" class="navbar-toggle btn btn-default btn-cascade" style="background:#46ad00" data-toggle="collapse" data-target=".navbar-collapse">
+     <span class="glyphicon glyphicon-menu-hamburger"></span>
+   </button>
+   <!--
+    <a class="navbar-brand" href="http://dart.grc-apps.svc.ice.ge.com/cascade.html#/catalog">
+      <img class="splash_nav_ge_logo" src="images/ge_monogram_primary_white_RGB.png">
+      #<span style="color:#46ad00">cas</span>cade
+    </a>
+      -->
+  </div>
+
+
+  <div class="navbar-collapse collapse" id="searchbar">
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a ui-sref="catalog">Catalog</a>
+      </li>
+      <li>
+        <a ui-sref="tools">Tools</a>
+      </li>
+      <li>
+        <a ui-sref="documentation">Documentation</a>
+      </li>
+    </ul>
+    <form class="navbar-form">
+      <div class="form-group" style="display:block;">
+        <div style="display:table;" class="input-group">
+          <span style="width: 1%;" class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+          <input type="text" autofocus="autofocus" autocomplete="off" placeholder="Search Here" name="search" style="" class="form-control">
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- END : collapse -->
+</div>

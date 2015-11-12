@@ -22,5 +22,5 @@ gulp.task('watch', function(){
 });
 
 gulp.task('clean', function(){
-  return del(['./public/**/*', '!./public/app.js','./public/views/**/*', './client/assets/**/*']);
+  return del([ '!./public/app.js','!./public/assets/**/*']);
 });

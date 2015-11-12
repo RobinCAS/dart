@@ -1,0 +1,34 @@
+<div class="hidden-xs">
+<div class="container-fluid" style="background-color:#484848 ">
+    <h4 style="color:#00b050; text-align:center">Filter Applications</h4>
+
+      <!-- checkbox filter : category -->
+      <div style="text-align:center">
+        <b>category</b>
+      </div>
+      <form role="form">
+        <div ng-repeat="app in apps | uniq:'category'" class="checkbox">
+          <label>
+            <input type="checkbox" ng-model="af_category[app.category]" >{{app.category}}
+          </label>
+        </div>
+      </form>
+
+      <!-- checkbox filter : owner-->
+
+        <div style="text-align:center">
+          <b>owner</b>
+        </div>
+        <form role="form">
+          <div ng-repeat="app in apps | uniq:'owner'" class="checkbox">
+            <label>
+              <input type="checkbox" ng-model="af_owner[app.owner]" >{{app.owner}}
+            </label>
+          </div>
+        </form>
+
+
+
+      </div>
+
+  </div>
