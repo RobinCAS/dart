@@ -256,7 +256,7 @@ DartApp.controller('FormAddAppCtrl', ['$scope','$http', function($scope, $http) 
     alert($scope.all_data);
     $http({
       method  : 'POST',
-      url     : 'query/insert_row.php',
+      url     : '/dart_apps',
       data    : $scope.all_data,  // pass in data as strings
       headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
    })
